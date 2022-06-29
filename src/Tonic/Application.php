@@ -195,9 +195,11 @@ class Application
                     array_shift($params);
                     $uriParams = $resourceMetadata->getUriParams($index);
                     if ($uriParams) { // has params within URI
+                        $namedParams = []; // restart with an empty params array
                         foreach ($uriParams as $key => $name) {
-                            $params[$name] = $params[$key];
+                            $namedParams[$name] = $params[$key];
                         }
+                        $params = $namedParams;
                     }
                     $matchedResource = array($resourceMetadata, $params);
                 }
