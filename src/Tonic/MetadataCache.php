@@ -15,13 +15,13 @@ interface MetadataCache
 
     /**
      * Load the resource metadata from disk
-     * @return str[]
+     * @return string[]
      */
     public function load();
 
     /**
      * Save resource metadata to disk
-     * @param  str[]   $resources Resource metadata
+     * @param string[] $resources Resource metadata
      * @return boolean
      */
     public function save($resources);

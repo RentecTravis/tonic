@@ -20,7 +20,7 @@ class Secret extends Tonic\Resource {
      *
      * @method GET
      * @secure aUser aPassword
-     * @return str
+     * @return string
      */
     function mySecret() {
         return 'My secret';
@@ -30,8 +30,8 @@ class Secret extends Tonic\Resource {
      * Condition method for the @secure annotation that checks the requests HTTP
      * authentication details against the username and password given in the annotation.
      *
-     * @param str $username
-     * @param str $password
+     * @param string $username
+     * @param string $password
      * @throws UnauthorizedException
      */
     function secure($username, $password) {

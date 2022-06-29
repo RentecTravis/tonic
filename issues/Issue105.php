@@ -13,8 +13,8 @@ class Issue105 extends Resource {
    /**
      * @method GET
      * @secure 
-     * @param str $id
-     * @return str
+     * @param string $id
+     * @return string
      */
     public function getResource($id = 'Papa'){
         return 'Hello '.$id;
@@ -25,7 +25,7 @@ class Issue105 extends Resource {
      * @priority 2
      * @only self
      * @secure
-     * @return str
+     * @return string
      */
     public function getSelf() {
         return $this->getResource($this->username);

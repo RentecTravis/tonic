@@ -27,8 +27,8 @@ class Hello extends Resource
      * response body, or a full Tonic\Response object.
      *
      * @method GET
-     * @param  str $name
-     * @return str
+     * @param string $name
+     * @return string
      */
     public function sayHello($name = 'World')
     {
@@ -40,8 +40,8 @@ class Hello extends Resource
      *
      * @method GET
      * @lang fr
-     * @param  str $name
-     * @return str
+     * @param string $name
+     * @return string
      */
     public function sayHelloInFrench($name = 'Monde')
     {
@@ -57,7 +57,7 @@ class Hello extends Resource
      * @method GET
      * @priority 2
      * @only deckard
-     * @return str
+     * @return string
      */
     public function replicants()
     {
@@ -73,7 +73,7 @@ class Hello extends Resource
      * @method GET
      * @priority 2
      * @only roy
-     * @return str
+     * @return string
      */
     public function iveSeenThings()
     {

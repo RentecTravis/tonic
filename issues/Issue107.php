@@ -11,7 +11,7 @@ class Issue107 extends Resource {
 
     /**
      * @method GET
-     * @param str $id
+     * @param string $id
      * @return Tonic\Response
      */
     public function get($id = 'default') {
@@ -29,7 +29,7 @@ class Issue107 extends Resource {
 
     /**
      * @method POST
-     * @return string
+     * @return stringing
      */
     public function create() {
         return "create";

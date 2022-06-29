@@ -73,11 +73,11 @@ class Request
      * Get an item from the given options array if it exists, otherwise fetch from HTTP header
      * or return the given default
      *
-     * @param  str[] $options
-     * @param  str $configVar Name of item to get
-     * @param  str|str[] $headers Name of HTTP header(s)
-     * @param  str $default Fallback value
-     * @return str
+     * @param string[] $options
+     * @param string $configVar Name of item to get
+     * @param string|str[] $headers Name of HTTP header(s)
+     * @param string $default Fallback value
+     * @return string
      */
     public function getOption($options, $configVar, $headers = null, $default = null)
     {
@@ -106,8 +106,8 @@ class Request
      *
      * Also gets private member via getter without explicitly using the getter.
      *
-     * @param str name
-     * @return str
+     * @param string name
+     * @return string
      */
     public function __get($name)
     {
@@ -120,7 +120,7 @@ class Request
     /**
      * Magic PHP method to set a private member without explicitly using the setter.
      *
-     * @param str name
+     * @param string name
      * @param mixed value
      */
     public function __set($name, $value)
@@ -284,8 +284,8 @@ class Request
 
     /**
      * Fetch the request URI from the server environment
-     * @param  str $options
-     * @return str
+     * @param string $options
+     * @return string
      */
     private function getURIFromEnvironment($options)
     {
@@ -327,8 +327,8 @@ class Request
 
     /**
      * Get accepted content mimetypes from request header
-     * @param  str   $acceptString
-     * @return str[]
+     * @param  string   $acceptString
+     * @return string[]
      */
     private function getAcceptArrayFromEnvironment($acceptString)
     {
@@ -356,8 +356,8 @@ class Request
 
     /**
      * Get if-match data from request header
-     * @param  str   $matchString
-     * @return str[]
+     * @param string   $matchString
+     * @return string[]
      */
     private function getMatchArrayFromEnvironment($matchString)
     {

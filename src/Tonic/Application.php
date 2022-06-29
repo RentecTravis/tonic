@@ -101,8 +101,8 @@ class Application
     /**
      * Add a namespace to a specific URI-space
      *
-     * @param str $namespaceName
-     * @param str $uriSpace
+     * @param string $namespaceName
+     * @param string $uriSpace
      */
     public function mount($namespaceName, $uriSpace)
     {
@@ -116,9 +116,9 @@ class Application
     /**
      * Get the URL for the given resource class
      *
-     * @param  str   $className
-     * @param  str[] $params
-     * @return str
+     * @param string   $className
+     * @param string[] $params
+     * @return string
      */
     public function uri($className, $params = array())
     {
