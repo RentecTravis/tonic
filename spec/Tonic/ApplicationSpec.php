@@ -77,7 +77,6 @@ class ApplicationSpec extends ObjectBehavior
     {
         $request->getUri()->willReturn('/quux/baz');
         $params = array(
-            0 => 'baz',
             'quuux' => 'baz'
         );
         $request->getParams()->willReturn($params);
