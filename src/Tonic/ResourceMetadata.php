@@ -61,7 +61,7 @@ class ResourceMetadata implements \ArrayAccess
         $this->methods = $this->readMethodAnnotations($className);
     }
 
-    public function offsetExists($name)
+    public function offsetExists($name) : bool
     {
         return isset($this->$name);
     }
@@ -71,14 +71,14 @@ class ResourceMetadata implements \ArrayAccess
         return isset($this->$name) ? $this->$name : null;
     }
 
-    public function offsetSet($name, $value)
+    public function offsetSet($name, $value) : void
     {
         if (!is_null($name)) {
             $this->$name = $value;
         }
     }
 
-    public function offsetUnset($name)
+    public function offsetUnset($name) : void
     {
         $this->$name = null;
     }
@@ -148,7 +148,7 @@ class ResourceMetadata implements \ArrayAccess
 
     /**
      * Append the given URI-space to the resources URLs
-     * @param str $uriSpace
+     * @param string $uriSpace
      */
     public function mount($uriSpace)
     {
@@ -159,7 +159,7 @@ class ResourceMetadata implements \ArrayAccess
 
     /**
      * Get the class doccomment from the reflector or from the source file.
-     * @return str
+     * @return string
      */
     private function getDocComment($classReflector)
     {
@@ -180,8 +180,8 @@ class ResourceMetadata implements \ArrayAccess
 
     /**
      * Parse annotations out of a doc comment
-     * @param  str   $comment Doc comment to parse
-     * @return str[]
+     * @param  string   $comment Doc comment to parse
+     * @return string[]
      */
     private function parseDocComment($comment)
     {
@@ -200,8 +200,8 @@ class ResourceMetadata implements \ArrayAccess
 
     /**
      * Turn a URL template into a regular expression
-     * @param  str[] $uri URL template
-     * @return str[] Regular expression and parameter names
+     * @param string[] $uri URL template
+     * @return string[] Regular expression and parameter names
      */
     private function uriTemplateToRegex($uri)
     {

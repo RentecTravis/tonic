@@ -101,8 +101,8 @@ class Response
 
     /**
      * Get a HTTP response header
-     * @param  str $name Header name, hyphens should be converted to camelcase
-     * @return str
+     * @param string $name Header name, hyphens should be converted to camelcase
+     * @return string
      */
     public function getHeader($name)
     {
@@ -111,8 +111,8 @@ class Response
 
     /**
      * Set a HTTP response header
-     * @param str $name  Header name, hyphens should be converted to camelcase
-     * @param str $value Header content
+     * @param string $name  Header name, hyphens should be converted to camelcase
+     * @param string $value Header content
      */
     public function setHeader($name, $value)
     {
@@ -122,8 +122,8 @@ class Response
     /**
      * Magic PHP method to get a HTTP response header.
      *
-     * @param str name
-     * @return str
+     * @param string name
+     * @return string
      */
     public function __get($name)
     {
@@ -133,8 +133,8 @@ class Response
     /**
      * Magic PHP method to set a HTTP response header.
      *
-     * @param str name
-     * @param str value
+     * @param string name
+     * @param string value
      */
     public function __set($name, $value)
     {

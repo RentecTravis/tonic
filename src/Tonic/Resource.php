@@ -21,8 +21,8 @@ class Resource
 
     /**
      * Get a URL parameter as defined by this resource and it's URI
-     * @param  str $name Name of the parameter
-     * @return str
+     * @param string $name Name of the parameter
+     * @return string
      */
     public function __get($name)
     {
@@ -31,8 +31,8 @@ class Resource
 
     /**
      * Check if a URL parameter exists
-     * @param  str $name Name of the parameter
-     * @return str
+     * @param string $name Name of the parameter
+     * @return string
      */
     public function __isset($name)
     {
@@ -42,8 +42,8 @@ class Resource
     /**
      * Get the method name of the best matching resource method.
      *
-     * @param  str[] $resourceMetadata
-     * @return str
+     * @param string[] $resourceMetadata
+     * @return string
      */
     private function calculateMethodPriorities($resourceMetadata)
     {
@@ -206,7 +206,7 @@ class Resource
 
     /**
      * HTTP method condition must match request method
-     * @param str $method
+     * @param string $method
      */
     protected function method($method)
     {
@@ -227,7 +227,7 @@ class Resource
 
     /**
      * Accepts condition mimetype must match request content type
-     * @param str $mimetype
+     * @param string $mimetype
      */
     protected function accepts($mimetype)
     {
@@ -241,7 +241,7 @@ class Resource
     /**
      * Provides condition mimetype must be in request accept array, returns a number
      * based on the priority of the match.
-     * @param  str $mimetype
+     * @param string $mimetype
      * @return int
      */
     protected function provides($mimetype)
@@ -266,7 +266,7 @@ class Resource
     /**
      * Lang condition language code must be in request accept lang array, returns a number
      * based on the priority of the match.
-     * @param  str $language
+     * @param string $language
      * @return int
      */
     protected function lang($language)

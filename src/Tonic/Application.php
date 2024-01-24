@@ -101,8 +101,8 @@ class Application
     /**
      * Add a namespace to a specific URI-space
      *
-     * @param str $namespaceName
-     * @param str $uriSpace
+     * @param string $namespaceName
+     * @param string $uriSpace
      */
     public function mount($namespaceName, $uriSpace)
     {
@@ -116,9 +116,9 @@ class Application
     /**
      * Get the URL for the given resource class
      *
-     * @param  str   $className
-     * @param  str[] $params
-     * @return str
+     * @param string   $className
+     * @param string[] $params
+     * @return string
      */
     public function uri($className, $params = array())
     {
@@ -195,9 +195,11 @@ class Application
                     array_shift($params);
                     $uriParams = $resourceMetadata->getUriParams($index);
                     if ($uriParams) { // has params within URI
+                        $namedParams = []; // restart with an empty params array
                         foreach ($uriParams as $key => $name) {
-                            $params[$name] = $params[$key];
+                            $namedParams[$name] = $params[$key];
                         }
+                        $params = $namedParams;
                     }
                     $matchedResource = array($resourceMetadata, $params);
                 }
